@@ -95,6 +95,28 @@ export function NewRequestForm({
     inline_attachments_fields,
     description_mimetype_field,
   } = requestForm;
+
+  let currentAttachmentsCount = 0;
+      if (attachments_field) {
+        attachments_field.isRequired = false; // Not required as can be passed in description
+        attachments_field.description = "Please attach the necessary file here or link in description."; // Set the attachments field description
+      }
+
+      const googleDocRegex = /https:\/\/docs\.google\.com\/document\/d\/([^\/]+)\//;
+
+      // This can be condensed into a much lighter method depending on how many verification you want to conduct
+      const hasDocFileInDescription = () => {
+        const descriptionField = ticketFields.find((field) => field.type === "description");
+        if (!descriptionField || typeof descriptionField.value !== "string") {
+          return undefined; // Description field is missing or not a string
+        }
+        const match = (descriptionField.value as string).match(googleDocRegex);
+        return match?.[1];
+      }
+
+      const hasFileInDescription = hasDocFileInDescription; // Add other method for different format in here like "|| hasPdfInDescription" for example
+
+
   const { answerBot, answerBotGenerativeExperience } = answerBotModal;
   const {
     ticketFields: prefilledTicketFields,
@@ -268,7 +290,13 @@ export function NewRequestForm({
           }
         })}
         {attachments_field && (
-          <Attachments field={attachments_field} baseLocale={baseLocale} />
+          <Attachments
+            field={attachments_field}
+            baseLocale={baseLocale}
+            onAttachmentCountChange={(count) => {
+              currentAttachmentsCount = count;
+            }}
+            />
         )}
         {inline_attachments_fields.map(({ type, name, value }, index) => (
           <input key={index} type={type} name={name} value={value} />
@@ -276,7 +304,15 @@ export function NewRequestForm({
         <Footer>
           {(ticket_form_field.options.length === 0 ||
             ticket_form_field.value) && (
-            <Button isPrimary type="submit">
+            <Button isPrimary type="submit" onClick = {(e) => {
+                                            		   // We check if 1 attachment is either attached or pasted
+                                                            if (currentAttachmentsCount === 0 && hasFileInDescription === undefined) {
+                                                              e.preventDefault();
+                                                              alert(t("new-request-form.attachments-required-alert", "Please attach at least one file before submitting the form."));
+                                                            }
+                                                          }}
+
+                                                         >
               {t("new-request-form.submit", "Submit")}
             </Button>
           )}
