@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "git@github.com:zendesk/copenhagen_theme.git",
   "scripts": {
-    "start": "concurrently -k -r 'rollup -c -w' 'wait-on script.js style.css && zcli themes:preview'",
+    "start": "concurrently -k -r \"rollup -c -w\" \"wait-on script.js style.css && zcli themes:preview\"",
     "build": "NODE_ENV=production rollup -c",
     "prebuild": "rm -f assets/*-bundle.js",
     "eslint": "eslint src",
@@ -120,5 +120,5 @@
       "@commitlint/config-conventional"
     ]
   },
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@4.16.0"
 }
