@@ -4,7 +4,7 @@
   "repository": "git@github.com:zendesk/copenhagen_theme.git",
   "scripts": {
     "start": "concurrently -k -r \"rollup -c -w\" \"wait-on script.js style.css && zcli themes:preview\"",
-    "build": "NODE_ENV=production rollup -c",
+    "build": "SET NODE_ENV=production & rollup -c",
     "prebuild": "rm -f assets/*-bundle.js",
     "eslint": "eslint src",
     "prepare": "husky install",
