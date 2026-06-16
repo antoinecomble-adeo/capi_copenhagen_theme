@@ -880,7 +880,7 @@ function NewRequestForm({ requestForm, wysiwyg, newRequestPath, parentId, parent
     const { ticket_fields, action, http_method, accept_charset, errors, parent_id_field, ticket_form_field, email_field, cc_field, organization_field, due_date_field, end_user_conditions, attachments_field, inline_attachments_fields, description_mimetype_field, } = requestForm;
     let currentAttachmentsCount = 0;
     if (attachments_field) {
-        attachments_field.isRequired = false; // Not required as can be passed in description
+        attachments_field.isRequired = true; // Not required as can be passed in description
         attachments_field.description = "Please attach the necessary file here or link in description."; // Set the attachments field description
     }
     const googleDocRegex = /https:\/\/docs\.google\.com\/document\/d\/([^\/]+)\//;

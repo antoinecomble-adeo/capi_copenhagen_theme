@@ -98,7 +98,7 @@ export function NewRequestForm({
 
   let currentAttachmentsCount = 0;
       if (attachments_field) {
-        attachments_field.isRequired = false; // Not required as can be passed in description
+        attachments_field.isRequired = true; // Not required as can be passed in description
         attachments_field.description = "Please attach the necessary file here or link in description."; // Set the attachments field description
       }
 
