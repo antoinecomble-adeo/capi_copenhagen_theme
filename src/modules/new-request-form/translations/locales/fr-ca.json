@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Oui, fermer ma demande",
   "new-request-form.answer-bot-modal.title": "Pendant que vous attendez, un de ces articles répond-il à votre question?",
   "new-request-form.answer-bot-modal.view-article": "Afficher l’article",
+  "new-request-form.attachments-required-alert": "Veuillez joindre au moins un fichier avant de soumettre le formulaire.",
   "new-request-form.attachments.choose-file-label": "Choisissez un fichier ou faites glisser et déposez ici",
   "new-request-form.attachments.drop-files-label": "Déposez les fichiers ici",
   "new-request-form.attachments.error-separator": "; ",

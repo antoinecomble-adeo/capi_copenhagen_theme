@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Taip, uždarykite mano prašymą",
   "new-request-form.answer-bot-modal.title": "Kol laukiate, ar kuris nors iš šių straipsnių atsako į jūsų klausimą?",
   "new-request-form.answer-bot-modal.view-article": "Peržiūrėti straipsnį",
+  "new-request-form.attachments-required-alert": "Prieš pateikdami formą, pridėkite bent vieną failą.",
   "new-request-form.attachments.choose-file-label": "Pasirinkite failą arba vilkite ir meskite čia",
   "new-request-form.attachments.drop-files-label": "Failų lašinimas čia",
   "new-request-form.attachments.error-separator": ";",

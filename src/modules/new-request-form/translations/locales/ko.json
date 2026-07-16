@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "예, 요청을 종료합니다",
   "new-request-form.answer-bot-modal.title": "기다리는 동안 다음 문서 중에서 질문에 대한 답변을 찾으셨나요?",
   "new-request-form.answer-bot-modal.view-article": "문서 보기",
+  "new-request-form.attachments-required-alert": "양식을 제출하기 전에 파일을 하나 이상 첨부해 주세요.",
   "new-request-form.attachments.choose-file-label": "파일을 선택하거나 여기에 드래그 앤 드롭하세요.",
   "new-request-form.attachments.drop-files-label": "파일을 여기에 드롭하세요",
   "new-request-form.attachments.error-separator": "; ",

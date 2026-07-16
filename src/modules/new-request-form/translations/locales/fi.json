@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Kyllä, sulje pyyntöni",
   "new-request-form.answer-bot-modal.title": "Sillä aikaa kun odotat, vastaako mikään näistä artikkeleista kysymykseesi?",
   "new-request-form.answer-bot-modal.view-article": "Näytä artikkeli",
+  "new-request-form.attachments-required-alert": "Liitä vähintään yksi tiedosto ennen lomakkeen lähettämistä.",
   "new-request-form.attachments.choose-file-label": "Valitse tiedosto tai vedä ja pudota se tähän",
   "new-request-form.attachments.drop-files-label": "Pudota tiedostot tähän",
   "new-request-form.attachments.error-separator": "; ",

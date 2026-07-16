@@ -7,6 +7,7 @@ interface UseWysiwygOptions {
   hasAtMentions: boolean;
   userRole: string;
   brandId: number;
+  onChange?: (value: string) => void;
 }
 
 export function useWysiwyg({
@@ -15,8 +16,11 @@ export function useWysiwyg({
   hasAtMentions,
   userRole,
   brandId,
+  onChange,
 }: UseWysiwygOptions) {
   const isInitializedRef = useRef(false);
+  const onChangeRef = useRef(onChange);
+  onChangeRef.current = onChange;
 
   return useCallback(
     async (ref: HTMLTextAreaElement) => {
@@ -58,6 +62,10 @@ export function useWysiwyg({
             notify({ type, title, message });
           }
         );
+
+        editor.model.document.on("change:data", () => {
+          onChangeRef.current?.(editor.getData());
+        });
       }
     },
     [hasWysiwyg, baseLocale, hasAtMentions, userRole, brandId]

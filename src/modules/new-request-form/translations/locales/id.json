@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Ya, tutup permintaan saya",
   "new-request-form.answer-bot-modal.title": "Sementara Anda menunggu, apakah ada di antara artikel-artikel ini yang menjawab pertanyaan Anda?",
   "new-request-form.answer-bot-modal.view-article": "Lihat artikel",
+  "new-request-form.attachments-required-alert": "Harap lampirkan setidaknya satu file sebelum mengirimkan formulir.",
   "new-request-form.attachments.choose-file-label": "Pilih file atau tarik dan letakkan di sini",
   "new-request-form.attachments.drop-files-label": "Letakkan file di sini",
   "new-request-form.attachments.error-separator": "; ",

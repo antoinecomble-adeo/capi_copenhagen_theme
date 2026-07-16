@@ -42,6 +42,7 @@ export function TextArea({
     hasAtMentions,
     userRole,
     brandId,
+    onChange,
   });
 
   return (

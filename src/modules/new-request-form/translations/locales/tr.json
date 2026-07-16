@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Evet, talebimi kapat",
   "new-request-form.answer-bot-modal.title": "Siz beklerken soralım: Bu makalelerden herhangi biri sorunuza yanıtladı mı?",
   "new-request-form.answer-bot-modal.view-article": "Makaleyi görüntüle",
+  "new-request-form.attachments-required-alert": "Formu göndermeden önce lütfen en az bir dosya ekleyin.",
   "new-request-form.attachments.choose-file-label": "Bir dosya seçin veya buraya sürükleyip bırakın",
   "new-request-form.attachments.drop-files-label": "Dosyaları buraya bırakın",
   "new-request-form.attachments.error-separator": "; ",

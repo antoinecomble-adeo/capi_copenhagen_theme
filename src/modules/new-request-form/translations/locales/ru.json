@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Да, закрыть мой запрос",
   "new-request-form.answer-bot-modal.title": "Пока вы ожидаете, есть ли в какой-то из этих статей ответ на ваш вопрос?",
   "new-request-form.answer-bot-modal.view-article": "Просмотреть статью",
+  "new-request-form.attachments-required-alert": "Пожалуйста, прикрепите хотя бы один файл перед отправкой формы.",
   "new-request-form.attachments.choose-file-label": "Выберите файл или перетащите его сюда",
   "new-request-form.attachments.drop-files-label": "Перетащите файлы сюда",
   "new-request-form.attachments.error-separator": "; ",

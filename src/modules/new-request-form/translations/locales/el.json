@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Ναι, να κλείσει το αίτημά μου",
   "new-request-form.answer-bot-modal.title": "Ενώ περιμένετε, απαντά στην ερώτηση κάποιο από αυτά τα άρθρα;",
   "new-request-form.answer-bot-modal.view-article": "Προβολή άρθρου",
+  "new-request-form.attachments-required-alert": "Παρακαλούμε επισυνάψτε τουλάχιστον ένα αρχείο πριν υποβάλετε τη φόρμα.",
   "new-request-form.attachments.choose-file-label": "Επιλέξτε ένα αρχείο ή σύρετε και αποθέστε εδώ",
   "new-request-form.attachments.drop-files-label": "Αποθέστε τα αρχεία εδώ",
   "new-request-form.attachments.error-separator": "; ",

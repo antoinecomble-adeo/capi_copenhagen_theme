@@ -309,3 +309,13 @@ parts:
       title: "[A11Y] Aria label value for the close modal button"
       value: "Close modal"
       screenshot: "https://drive.google.com/file/d/11qwmad1gcWHjtJ6LhyRxk1d9BlREjxwr/view?usp=sharing"
+  - translation:
+      key: "new-request-form.attachments-required-alert"
+      title: "Alert shown when the user tries to submit the form without attaching a file"
+      screenshot: ""
+      value: "Please attach at least one file before submitting the form."
+  - translation:
+      key: "new-request-form.answer-bot-generative-modal.view_sources"
+      title: ""
+      screenshot: ""
+      value: "View Sources"

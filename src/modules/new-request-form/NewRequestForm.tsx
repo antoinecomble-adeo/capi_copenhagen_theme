@@ -100,7 +100,7 @@ export function NewRequestForm({
       if (attachments_field) {
         attachments_field.isRequired = true; // Not required as can be passed in description
         attachments_field.description = "Please attach the necessary file here or link in description."; // Set the attachments field description
-      }
+       }
 
       const googleDocRegex = /https:\/\/docs\.google\.com\/document\/d\/([^\/]+)\//;
 
@@ -114,7 +114,7 @@ export function NewRequestForm({
         return match?.[1];
       }
 
-      const hasFileInDescription = hasDocFileInDescription; // Add other method for different format in here like "|| hasPdfInDescription" for example
+      const hasFileInDescription = () => hasDocFileInDescription();
 
 
   const { answerBot, answerBotGenerativeExperience } = answerBotModal;
@@ -306,7 +306,7 @@ export function NewRequestForm({
             ticket_form_field.value) && (
             <Button isPrimary type="submit" onClick = {(e) => {
                                             		   // We check if 1 attachment is either attached or pasted
-                                                            if (currentAttachmentsCount === 0 && hasFileInDescription === undefined) {
+                                                            if (currentAttachmentsCount === 0 && hasFileInDescription() === undefined) {
                                                               e.preventDefault();
                                                               alert(t("new-request-form.attachments-required-alert", "Please attach at least one file before submitting the form."));
                                                             }

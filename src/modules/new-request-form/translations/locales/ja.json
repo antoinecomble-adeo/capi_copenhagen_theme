@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "はい、リクエストを終了",
   "new-request-form.answer-bot-modal.title": "これらの記事のいずれかで疑問が解消されますか？",
   "new-request-form.answer-bot-modal.view-article": "記事を表示",
+  "new-request-form.attachments-required-alert": "フォームを送信する前に、少なくとも1つのファイルを添付してください。",
   "new-request-form.attachments.choose-file-label": "ファイルを選択するか、ここにドラッグアンドドロップします",
   "new-request-form.attachments.drop-files-label": "ファイルをここにドロップ",
   "new-request-form.attachments.error-separator": "また、 ",

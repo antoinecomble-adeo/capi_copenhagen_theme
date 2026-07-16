@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Да, затворете заявката ми",
   "new-request-form.answer-bot-modal.title": "Докато чакате, вижте дали някоя от тези статии отговаря на въпроса ви.",
   "new-request-form.answer-bot-modal.view-article": "Преглед на статията",
+  "new-request-form.attachments-required-alert": "Моля, прикачете поне един файл, преди да изпратите формуляра.",
   "new-request-form.attachments.choose-file-label": "Изберете файл или го плъзнете и пуснете тук",
   "new-request-form.attachments.drop-files-label": "Пуснете файловете тук",
   "new-request-form.attachments.error-separator": "; ",

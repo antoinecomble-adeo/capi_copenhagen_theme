@@ -891,7 +891,7 @@ function NewRequestForm({ requestForm, wysiwyg, newRequestPath, parentId, parent
         const match = descriptionField.value.match(googleDocRegex);
         return match?.[1];
     };
-    const hasFileInDescription = hasDocFileInDescription; // Add other method for different format in here like "|| hasPdfInDescription" for example
+    const hasFileInDescription = () => hasDocFileInDescription();
     const { answerBot, answerBotGenerativeExperience } = answerBotModal;
     const { ticketFields: prefilledTicketFields, emailField, ccField, organizationField: prefilledOrganizationField, dueDateField: prefilledDueDateField, } = usePrefilledTicketFields({
         ticketFields: ticket_fields,
@@ -951,7 +951,7 @@ function NewRequestForm({ requestForm, wysiwyg, newRequestPath, parentId, parent
                         } })), inline_attachments_fields.map(({ type, name, value }, index) => (jsxRuntimeExports.jsx("input", { type: type, name: name, value: value }, index))), jsxRuntimeExports.jsx(Footer, { children: (ticket_form_field.options.length === 0 ||
                             ticket_form_field.value) && (jsxRuntimeExports.jsx(Button, { isPrimary: true, type: "submit", onClick: (e) => {
                                 // We check if 1 attachment is either attached or pasted
-                                if (currentAttachmentsCount === 0 && hasFileInDescription === undefined) {
+                                if (currentAttachmentsCount === 0 && hasFileInDescription() === undefined) {
                                     e.preventDefault();
                                     alert(t("new-request-form.attachments-required-alert", "Please attach at least one file before submitting the form."));
                                 }

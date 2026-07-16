@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Ja, mijn aanvraag sluiten",
   "new-request-form.answer-bot-modal.title": "Terwijl u wacht: beantwoordt een van deze artikelen uw vraag?",
   "new-request-form.answer-bot-modal.view-article": "Artikel weergeven",
+  "new-request-form.attachments-required-alert": "Voeg ten minste één bestand toe voordat u het formulier verzendt.",
   "new-request-form.attachments.choose-file-label": "Kies een bestand of versleep het hierheen",
   "new-request-form.attachments.drop-files-label": "Zet bestanden hier neer",
   "new-request-form.attachments.error-separator": "; ",

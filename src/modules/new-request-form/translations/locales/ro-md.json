@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Da, închideți solicitarea",
   "new-request-form.answer-bot-modal.title": "Cât așteptați, vreunul dintre aceste articole răspunde la întrebarea dumneavoastră?",
   "new-request-form.answer-bot-modal.view-article": "Vizualizare articol",
+  "new-request-form.attachments-required-alert": "Vă rugăm să atașați cel puțin un fișier înainte de a trimite formularul.",
   "new-request-form.attachments.choose-file-label": "Alegeți un fișier sau glisați și fixați aici",
   "new-request-form.attachments.drop-files-label": "Glisați fișierele aici",
   "new-request-form.attachments.error-separator": "; ",

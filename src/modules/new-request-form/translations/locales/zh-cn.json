@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "解答了，关闭我的请求",
   "new-request-form.answer-bot-modal.title": "在等待的同时，看看这些文章中有没有可以解答该疑问的？",
   "new-request-form.answer-bot-modal.view-article": "查看文章",
+  "new-request-form.attachments-required-alert": "请在提交表单之前至少附上一个文件。",
   "new-request-form.attachments.choose-file-label": "选择文件或拖放到此处",
   "new-request-form.attachments.drop-files-label": "将文件放在此处",
   "new-request-form.attachments.error-separator": "; ",

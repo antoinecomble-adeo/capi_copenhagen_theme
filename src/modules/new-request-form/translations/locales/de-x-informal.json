@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Ja, Anfrage schließen",
   "new-request-form.answer-bot-modal.title": "Während Sie warten, wird Ihre Frage durch einen dieser Beiträge beantwortet?",
   "new-request-form.answer-bot-modal.view-article": "Beitrag anzeigen",
+  "new-request-form.attachments-required-alert": "Bitte fügen Sie mindestens eine Datei an, bevor Sie das Formular absenden.",
   "new-request-form.attachments.choose-file-label": "Datei auswählen oder hierher ziehen",
   "new-request-form.attachments.drop-files-label": "Dateien hier ablegen",
   "new-request-form.attachments.error-separator": "; ",

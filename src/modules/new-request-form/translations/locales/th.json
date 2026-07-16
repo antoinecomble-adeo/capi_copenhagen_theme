@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "ใช่ ปิดคำร้องขอของฉัน",
   "new-request-form.answer-bot-modal.title": "ขณะที่กำลังรอ บทความเหล่านี้ตอบข้อสงสัยของคุณหรือไม่",
   "new-request-form.answer-bot-modal.view-article": "ดูบทความ",
+  "new-request-form.attachments-required-alert": "กรุณาแนบไฟล์อย่างน้อยหนึ่งไฟล์ก่อนส่งแบบฟอร์ม",
   "new-request-form.attachments.choose-file-label": "เลือกไฟล์หรือลากแล้ววางที่นี่",
   "new-request-form.attachments.drop-files-label": "วางไฟล์ที่นี่",
   "new-request-form.attachments.error-separator": "; ",

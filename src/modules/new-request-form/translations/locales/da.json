@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Ja, luk min anmodning",
   "new-request-form.answer-bot-modal.title": "Mens du venter, er der da nogen af disse artikler, som besvarer dit spørgsmål?",
   "new-request-form.answer-bot-modal.view-article": "Se artikel",
+  "new-request-form.attachments-required-alert": "Vedhæft mindst én fil, før du indsender formularen.",
   "new-request-form.attachments.choose-file-label": "Vælg en fil eller træk og slip her",
   "new-request-form.attachments.drop-files-label": "Slip filerne her",
   "new-request-form.attachments.error-separator": "; ",

@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Sì, chiudi la richiesta",
   "new-request-form.answer-bot-modal.title": "Nell’attesa, le informazioni in uno o più di questi articoli potrebbero rispondere alla domanda.",
   "new-request-form.answer-bot-modal.view-article": "Visualizza articolo",
+  "new-request-form.attachments-required-alert": "Allega almeno un file prima di inviare il modulo.",
   "new-request-form.attachments.choose-file-label": "Scegli un file o trascinalo qui",
   "new-request-form.attachments.drop-files-label": "Trascina qui i file",
   "new-request-form.attachments.error-separator": "; ",

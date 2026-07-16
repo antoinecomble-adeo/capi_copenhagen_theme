@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Sí, tanca la meva sol·licitud",
   "new-request-form.answer-bot-modal.title": "Mentre espereu, algun d'aquests articles respon a la vostra pregunta?",
   "new-request-form.answer-bot-modal.view-article": "Mostra l'article",
+  "new-request-form.attachments-required-alert": "Adjunteu almenys un fitxer abans d'enviar el formulari.",
   "new-request-form.attachments.choose-file-label": "Trieu un fitxer o arrossegueu-lo i deixeu-lo anar aquí",
   "new-request-form.attachments.drop-files-label": "Deixeu anar els fitxers aquí",
   "new-request-form.attachments.error-separator": "; ",

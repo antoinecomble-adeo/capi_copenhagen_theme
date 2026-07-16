@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "हाँ, कृपया मेरा अनुरोध समाप्त करें",
   "new-request-form.answer-bot-modal.title": "प्रतीक्षा करते समय, क्या इन आलेखों से आपके प्रश्न का उत्तर मिलता है?",
   "new-request-form.answer-bot-modal.view-article": "आलेख देखें",
+  "new-request-form.attachments-required-alert": "फ़ॉर्म सबमिट करने से पहले कृपया कम से कम एक फ़ाइल संलग्न करें।",
   "new-request-form.attachments.choose-file-label": "कोई फ़ाइल चुनें या यहां खींचें और छोड़ें",
   "new-request-form.attachments.drop-files-label": "फाइलों को यहां छोड़ें",
   "new-request-form.attachments.error-separator": "; ",

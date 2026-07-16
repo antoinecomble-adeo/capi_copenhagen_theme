@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Tak, zamknij zlecenie",
   "new-request-form.answer-bot-modal.title": "W czasie gdy oczekujesz na odpowiedź, może zechcesz nam powiedzieć, czy którykolwiek z tych artykułów zawiera odpowiedź na pytanie?",
   "new-request-form.answer-bot-modal.view-article": "Wyświetl artykuł",
+  "new-request-form.attachments-required-alert": "Przed przesłaniem formularza dołącz co najmniej jeden plik.",
   "new-request-form.attachments.choose-file-label": "Wybierz plik lub przeciągnij i upuść go tutaj",
   "new-request-form.attachments.drop-files-label": "Upuść pliki tutaj",
   "new-request-form.attachments.error-separator": "; ",

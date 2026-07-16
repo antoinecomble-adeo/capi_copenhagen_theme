@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Yes, close my request",
   "new-request-form.answer-bot-modal.title": "While you wait, do any of these articles answer your question?",
   "new-request-form.answer-bot-modal.view-article": "View article",
+  "new-request-form.attachments-required-alert": "Enne vormi esitamist lisage vähemalt üks fail.",
   "new-request-form.attachments.choose-file-label": "Vali pilt/fail või lohista see siia",
   "new-request-form.attachments.drop-files-label": "Drop files here",
   "new-request-form.attachments.error-separator": "; ",

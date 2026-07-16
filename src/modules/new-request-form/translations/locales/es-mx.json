@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Sí, cerrar mi solicitud",
   "new-request-form.answer-bot-modal.title": "Mientras espera, ¿alguno de estos artículos responde su pregunta?",
   "new-request-form.answer-bot-modal.view-article": "Ver artículo",
+  "new-request-form.attachments-required-alert": "Adjunte al menos un archivo antes de enviar el formulario.",
   "new-request-form.attachments.choose-file-label": "Elegir un archivo o arrastrar y soltar uno aquí",
   "new-request-form.attachments.drop-files-label": "Suelte los archivos aquí",
   "new-request-form.attachments.error-separator": "; ",

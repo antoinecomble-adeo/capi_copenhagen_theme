@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Có, đóng yêu cầu của tôi",
   "new-request-form.answer-bot-modal.title": "Trong thời gian chờ đợi, có bài viết nào trong số các bài viết này giải đáp được thắc mắc của bạn không?",
   "new-request-form.answer-bot-modal.view-article": "Xem bài viết",
+  "new-request-form.attachments-required-alert": "Vui lòng đính kèm ít nhất một tệp trước khi gửi biểu mẫu.",
   "new-request-form.attachments.choose-file-label": "Chọn một tập tin hoặc kéo và thả ở đây",
   "new-request-form.attachments.drop-files-label": "Thả tập tin vào đây",
   "new-request-form.attachments.error-separator": "; ",

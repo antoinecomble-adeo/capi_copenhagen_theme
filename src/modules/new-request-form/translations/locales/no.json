@@ -26,6 +26,7 @@
   "new-request-form.answer-bot-modal.solve-request": "Ja, avslutt forespørselen",
   "new-request-form.answer-bot-modal.title": "Mens du venter: Kanskje en av disse artiklene har svar på spørsmålet ditt?",
   "new-request-form.answer-bot-modal.view-article": "Vis artikkel",
+  "new-request-form.attachments-required-alert": "Legg ved minst én fil før du sender inn skjemaet.",
   "new-request-form.attachments.choose-file-label": "Velg en fil eller dra og slipp her",
   "new-request-form.attachments.drop-files-label": "Slipp filene her",
   "new-request-form.attachments.error-separator": "; ",
