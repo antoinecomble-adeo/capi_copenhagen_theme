@@ -881,17 +881,18 @@ function NewRequestForm({ requestForm, wysiwyg, newRequestPath, parentId, parent
         attachments_field.isRequired = true; // Not required as can be passed in description
         attachments_field.description = "Please attach the necessary file here or link in description."; // Set the attachments field description
     }
-    const googleDocRegex = /https:\/\/docs\.google\.com\/document\/d\/([^\/]+)\//;
+    // Matches Google Docs links, Google Drive links, and direct links to image files
+    const fileLinkRegex = /https:\/\/docs\.google\.com\/document\/d\/[^\/\s]+\/|https:\/\/drive\.google\.com\/drive\/\S+|https?:\/\/\S+\.(?:jpe?g|png|gif|bmp|webp|svg)/i;
     // This can be condensed into a much lighter method depending on how many verification you want to conduct
-    const hasDocFileInDescription = () => {
+    const hasFileLinkInDescription = () => {
         const descriptionField = ticketFields.find((field) => field.type === "description");
         if (!descriptionField || typeof descriptionField.value !== "string") {
             return undefined; // Description field is missing or not a string
         }
-        const match = descriptionField.value.match(googleDocRegex);
-        return match?.[1];
+        const match = descriptionField.value.match(fileLinkRegex);
+        return match?.[0];
     };
-    const hasFileInDescription = () => hasDocFileInDescription();
+    const hasFileInDescription = () => hasFileLinkInDescription();
     const { answerBot, answerBotGenerativeExperience } = answerBotModal;
     const { ticketFields: prefilledTicketFields, emailField, ccField, organizationField: prefilledOrganizationField, dueDateField: prefilledDueDateField, } = usePrefilledTicketFields({
         ticketFields: ticket_fields,
