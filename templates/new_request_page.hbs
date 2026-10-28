@@ -42,6 +42,7 @@
     organizations: {{json user.organizations}},
     wysiwyg: true,
     showSuggestedArticles: showSuggestedArticles,
+    attachmentsRequiredFormId: String(settings.attachments_required_form_id || ""),
     answerBotModal: {
       answerBot: {{#if answer_bot}}{{json answer_bot}}{{else}}null{{/if}},
       answerBotGenerativeExperience: {{#if answer_bot_generative_experience}}{{json answer_bot_generative_experience}}{{else}}null{{/if}},

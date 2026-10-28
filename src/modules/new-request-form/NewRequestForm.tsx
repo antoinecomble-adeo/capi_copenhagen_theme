@@ -3,7 +3,7 @@ import type {
   AnswerBotGenerativeExperience,
   RequestForm,
 } from "./data-types";
-import { Fragment, useCallback, useState } from "react";
+import { Fragment, useCallback, useRef, useState } from "react";
 import { TicketFormField } from "./ticket-form-field/TicketFormField";
 import { ParentTicketField } from "./parent-ticket-field/ParentTicketField";
 import { Anchor, Button } from "@zendeskgarden/react-buttons";
@@ -36,6 +36,7 @@ export interface NewRequestFormProps {
   userId: number;
   brandId: number;
   showSuggestedArticles: boolean;
+  attachmentsRequiredFormId: string;
   organizations: Array<Organization>;
   answerBotModal: {
     answerBot: AnswerBot | null;
@@ -75,6 +76,7 @@ export function NewRequestForm({
   userId,
   brandId,
   showSuggestedArticles,
+  attachmentsRequiredFormId,
   organizations,
   answerBotModal,
 }: NewRequestFormProps) {
@@ -96,27 +98,22 @@ export function NewRequestForm({
     description_mimetype_field,
   } = requestForm;
 
-  let currentAttachmentsCount = 0;
-      if (attachments_field) {
-        attachments_field.isRequired = true; // Not required as can be passed in description
-        attachments_field.description = "Please attach the necessary file here or link in description."; // Set the attachments field description
-       }
+  const currentAttachmentsCount = useRef(
+    attachments_field?.attachments.length ?? 0
+  );
+  const requiresAttachment =
+    !!attachmentsRequiredFormId &&
+    new URLSearchParams(window.location.search).get("ticket_form_id") ===
+      attachmentsRequiredFormId;
 
-      // Matches Google Docs links, Google Drive links, and direct links to image files
-      const fileLinkRegex = /https:\/\/docs\.google\.com\/document\/d\/[^\/\s]+\/|https:\/\/drive\.google\.com\/drive\/\S+|https?:\/\/\S+\.(?:jpe?g|png|gif|bmp|webp|svg)/i;
+  if (attachments_field && requiresAttachment) {
+    attachments_field.isRequired = false; // A file link in the description also satisfies this requirement.
+    attachments_field.description =
+      "Please attach the necessary file here or link in description.";
+  }
 
-      // This can be condensed into a much lighter method depending on how many verification you want to conduct
-      const hasFileLinkInDescription = () => {
-        const descriptionField = ticketFields.find((field) => field.type === "description");
-        if (!descriptionField || typeof descriptionField.value !== "string") {
-          return undefined; // Description field is missing or not a string
-        }
-        const match = (descriptionField.value as string).match(fileLinkRegex);
-        return match?.[0];
-      }
-
-      const hasFileInDescription = () => hasFileLinkInDescription();
-
+  const fileLinkRegex =
+    /https:\/\/docs\.google\.com\/document\/d\/[^/\s]+\/|https:\/\/drive\.google\.com\/drive\/\S+|https?:\/\/\S+\.(?:jpe?g|png|gif|bmp|webp|svg)/i;
 
   const { answerBot, answerBotGenerativeExperience } = answerBotModal;
   const {
@@ -140,6 +137,31 @@ export function NewRequestForm({
   const visibleFields = getVisibleFields(ticketFields, end_user_conditions);
   const { formRefCallback, handleSubmit } = useFormSubmit(ticketFields);
   const { t } = useTranslation();
+  const onSubmit: typeof handleSubmit = (event) => {
+    const description = ticketFields.find(
+      (field) => field.type === "description"
+    );
+    const hasFileInDescription =
+      typeof description?.value === "string" &&
+      fileLinkRegex.test(description.value);
+
+    if (
+      requiresAttachment &&
+      currentAttachmentsCount.current === 0 &&
+      !hasFileInDescription
+    ) {
+      event.preventDefault();
+      alert(
+        t(
+          "new-request-form.attachments-required-alert",
+          "Please attach at least one file before submitting the form."
+        )
+      );
+      return;
+    }
+
+    handleSubmit(event);
+  };
   const defaultOrganizationId =
     organizations.length > 0 && organizations[0]?.id
       ? organizations[0]?.id?.toString()
@@ -214,7 +236,7 @@ export function NewRequestForm({
         method={http_method}
         acceptCharset={accept_charset}
         noValidate
-        onSubmit={handleSubmit}
+        onSubmit={onSubmit}
       >
         {errors && <Alert type="error">{errors}</Alert>}
         {parent_id_field && <ParentTicketField field={parent_id_field} />}
@@ -295,9 +317,9 @@ export function NewRequestForm({
             field={attachments_field}
             baseLocale={baseLocale}
             onAttachmentCountChange={(count) => {
-              currentAttachmentsCount = count;
+              currentAttachmentsCount.current = count;
             }}
-            />
+          />
         )}
         {inline_attachments_fields.map(({ type, name, value }, index) => (
           <input key={index} type={type} name={name} value={value} />
@@ -305,15 +327,7 @@ export function NewRequestForm({
         <Footer>
           {(ticket_form_field.options.length === 0 ||
             ticket_form_field.value) && (
-            <Button isPrimary type="submit" onClick = {(e) => {
-                                            		   // We check if 1 attachment is either attached or pasted
-                                                            if (currentAttachmentsCount === 0 && hasFileInDescription() === undefined) {
-                                                              e.preventDefault();
-                                                              alert(t("new-request-form.attachments-required-alert", "Please attach at least one file before submitting the form."));
-                                                            }
-                                                          }}
-
-                                                         >
+            <Button isPrimary type="submit">
               {t("new-request-form.submit", "Submit")}
             </Button>
           )}

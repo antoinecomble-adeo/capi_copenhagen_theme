@@ -397,6 +397,16 @@ parts:
       screenshot: "https://drive.google.com/file/d/1UrHbBwCWc2R-tzdOXCMoKj-ztZ9FXzfb/view?usp=sharing"
       value: "Show suggested articles on new request form"
   - translation:
+      key: "txt.help_center_copenhagen_theme.attachments_required_form_id_label"
+      title: "Label for the ticket form ID requiring an attachment or file link"
+      screenshot: ""
+      value: "Ticket form ID requiring an attachment"
+  - translation:
+      key: "txt.help_center_copenhagen_theme.attachments_required_form_id_description"
+      title: "Description for the ticket form ID requiring an attachment or file link"
+      screenshot: ""
+      value: "Enter the ticket_form_id from the new request URL. On this form, require an attachment or a file link in the description. Leave blank to disable this check."
+  - translation:
       key: "txt.help_center_copenhagen_theme.show_brand_name_label"
       title: "Label for the show brand name setting"
       screenshot: "https://drive.google.com/file/d/16zQao3zk3uRScIUpkyc6bXAWwqHh3Zh-/view?usp=sharing"
